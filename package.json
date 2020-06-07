@@ -4,6 +4,8 @@
   "description": "Associated repository to my talk \"Nothing but JS\"",
   "main": "index.js",
   "scripts": {
+    "build": "lerna run build",
+    "postinstall": "lerna bootstrap",
     "audit": "npm audit fix && lerna-audit",
     "clean": "rm -rf dist && lerna clean -y"
   },

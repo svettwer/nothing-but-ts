@@ -6,23 +6,6 @@
   "homepage": "https://github.com/svettwer/nothing-but-js/tree/master/packages/api#readme",
   "license": "ISC",
   "main": "lib/api.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/svettwer/nothing-but-js.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/svettwer/nothing-but-js/issues"
-  },
   "devDependencies": {
     "typescript": "^3.9.5"
   }
