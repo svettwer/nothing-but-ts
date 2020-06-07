@@ -22,5 +22,8 @@
   },
   "bugs": {
     "url": "https://github.com/svettwer/nothing-but-js/issues"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
   }
 }
