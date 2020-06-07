@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "audit": "npm audit fix && lerna-audit",
-    "clean": "rm -rf dist && lerna clean -y",
+    "clean": "rm -rf dist && lerna clean -y"
   },
   "repository": {
     "type": "git",
