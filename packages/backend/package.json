@@ -6,24 +6,23 @@
   "homepage": "https://github.com/svettwer/nothing-but-js/tree/master/packages/backend#readme",
   "license": "ISC",
   "main": "lib/backend.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/svettwer/nothing-but-js.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/svettwer/nothing-but-js/issues"
+    "build": "tsc",
+    "start": "node ../../dist/index.js",
+    "start:dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec node -r ts-node/register --inspect src/index.ts"
   },
   "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^13.13.5",
+    "ts-node": "^8.10.1",
     "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }
