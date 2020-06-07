@@ -1,0 +1,21 @@
+{
+  "name": "noting-but-js",
+  "version": "1.0.0",
+  "description": "Associated repository to my talk \"Nothing but JS\"",
+  "main": "index.js",
+  "scripts": {
+    "audit": "npm audit fix && lerna-audit",
+    "clean": "rm -rf dist && lerna clean -y",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svettwer/nothing-but-js.git"
+  },
+  "author": "Sven Hettwer <Sven.Hettwer@web.de>",
+  "license": "ISC",
+  "homepage": "https://github.com/svettwer/nothing-but-js#readme",
+  "dependencies": {
+    "lerna": "^3.22.0",
+    "lerna-audit": "^1.2.0"
+  }
+}
