@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "@nothing-but-js/backend",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Sven Hettwer <sven.hettwer@consol.de>",
@@ -15,6 +15,7 @@
     "start:dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec node -r ts-node/register --inspect src/index.ts"
   },
   "devDependencies": {
+    "@nothing-but-js/api": "1.0.0",
     "@types/express": "^4.17.6",
     "@types/node": "^13.13.5",
     "ts-node": "^8.10.1",

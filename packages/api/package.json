@@ -4,18 +4,12 @@
   "description": "> TODO: description",
   "author": "Sven Hettwer <sven.hettwer@consol.de>",
   "license": "ISC",
-  "main": "lib/api.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start:dev": "npm-watch"
-  },
-  "watch": {
-    "build": "src/*.js"
+    "start:dev": "tsc-watch --noClear"
   },
   "devDependencies": {
-    "typescript": "^3.9.5"
-  },
-  "dependencies": {
-    "npm-watch": "^0.6.0"
+    "typescript": "^3.9.5",
+    "tsc-watch": "^4.2.9"
   }
 }
