@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Sven Hettwer <sven.hettwer@consol.de>",
-  "homepage": "https://github.com/svettwer/nothing-but-js/tree/master/packages/frontend#readme",
   "license": "ISC",
   "main": "lib/frontend.js",
   "dependencies": {
@@ -22,7 +21,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:dev": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "mv build ../../dist/frontend",
     "test": "react-scripts test",

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "lerna run build",
+    "start:dev": "lerna run start:dev --stream",
     "postinstall": "lerna bootstrap",
     "audit": "npm audit fix && lerna-audit",
     "clean": "rm -rf dist && lerna clean -y"

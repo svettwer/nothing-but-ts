@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Sven Hettwer <sven.hettwer@consol.de>",
-  "homepage": "https://github.com/svettwer/nothing-but-js/tree/master/packages/api#readme",
   "license": "ISC",
   "main": "lib/api.js",
   "devDependencies": {
