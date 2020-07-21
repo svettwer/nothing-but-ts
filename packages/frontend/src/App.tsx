@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Game } from "@nothing-but-js/api";
 
@@ -35,7 +35,7 @@ function App() {
       <div className="App">
         <div id="score">
           <h1>
-            Dealer: {game.dealerScore}
+            Dealer: {game.dealerScore > 0 ? game.dealerScore : "?"}
           </h1>
           <h1>
             Player: {game.playerScore}
