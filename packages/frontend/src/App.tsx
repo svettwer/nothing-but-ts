@@ -9,9 +9,35 @@ function App() {
     dealerScore: 0
   });
 
+  function handleHit() {
+    fetch('/api/game/hit',{
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(game)
+    }).then(response => response.json())
+        .then(receivedGame => setGame(receivedGame))
+  }
+
   return (
       <div className="App">
-
+        <div id="score">
+          <h1>
+            Dealer: {game.dealerScore}
+          </h1>
+          <h1>
+            Player: {game.playerScore}
+          </h1>
+        </div>
+        <div>
+          <button>
+            stand
+          </button>
+          <button onClick={handleHit}>
+            hit
+          </button>
+        </div>
       </div>
   );
 }
