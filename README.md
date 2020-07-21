@@ -17,3 +17,8 @@ Backend: Java; Frontend: Something with Javascript. This is what the tech stack 
 * [create react app](https://reactjs.org/docs/create-a-new-react-app.html)
 
 ## How to start it locally
+```
+git clone https://github.com/svettwer/nothing-but-js.git
+cd nothing-but-js
+npm start:dev
+```
