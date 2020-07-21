@@ -20,6 +20,17 @@ function App() {
         .then(receivedGame => setGame(receivedGame))
   }
 
+  function handleStand() {
+    fetch('/api/game/stand', {
+      method: "POST",
+      headers:{
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify(game)
+    }).then(response => response.json())
+        .then(receivedGame => setGame(receivedGame))
+  }
+
   return (
       <div className="App">
         <div id="score">
@@ -31,7 +42,7 @@ function App() {
           </h1>
         </div>
         <div>
-          <button>
+          <button onClick={handleStand}>
             stand
           </button>
           <button onClick={handleHit}>

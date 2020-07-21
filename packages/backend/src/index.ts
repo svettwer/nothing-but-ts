@@ -11,8 +11,19 @@ app.post("/api/game/hit", (req, res) => {
     let game: Game = req.body;
     res.send({
         ...game,
-        playerScore: game.playerScore + Math.round(Math.random() * 11)
+        playerScore: game.playerScore + Math.ceil(Math.random() * 11)
     });
+})
+
+app.post("/api/game/stand", (req, res) => {
+    let game: Game = req.body;
+    while(game.dealerScore <= 17){
+        game = {
+            ...game,
+            dealerScore: game.dealerScore + Math.ceil(Math.random() * 11)
+        }
+    }
+    res.send(game)
 })
 
 const port = 8080;
