@@ -40,6 +40,12 @@ function App() {
       return gameToCheck.dealerScore > 0 || gameToCheck.playerScore >= 21;
     }
 
+    function youWon(gameToAnalyze: Game) {
+      return gameToAnalyze.dealerScore > 21
+          || gameToAnalyze.playerScore > gameToAnalyze.dealerScore
+          && gameToAnalyze.playerScore <= 21;
+    }
+
     if(!gameIsOver(game)){
       return(
           <div>
@@ -54,12 +60,12 @@ function App() {
     }else{
       let message;
       let messageStyle;
-      if(game.playerScore > 21 || (game.playerScore < game.dealerScore && game.dealerScore < 21)){
-        message = "YOU LOSE!";
-        messageStyle = {color: "red"}
-      }else if(game.dealerScore > 21 || game.playerScore > game.dealerScore){
+      if(youWon(game)){
         message = "YOU WIN!";
         messageStyle = {color: "green"}
+      }else {
+        message = "YOU LOSE!";
+        messageStyle = {color: "red"}
       }
       return (
           <div>
