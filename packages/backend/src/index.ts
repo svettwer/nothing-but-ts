@@ -14,11 +14,7 @@ app.post("/api/game/hit", (req, res) => {
         playerScore: game.playerScore + Math.ceil(Math.random() * 11)
     }
     if(gameIsOver(game)){
-        game = {
-            ...game,
-            message: "You Lose!",
-            messageStyle: {color: "red"}
-        }
+        game = calculateResult(game);
     }
     res.send(game);
 })
@@ -31,24 +27,27 @@ app.post("/api/game/stand", (req, res) => {
             dealerScore: game.dealerScore + Math.ceil(Math.random() * 11)
         }
     }
+    res.send(calculateResult(game))
+})
+
+function calculateResult(game: Game) {
     if(youWon(game)){
-        game = {
+        return {
             ...game,
             message: "You Win!",
             messageStyle: {color: "green"}
         }
     }else{
-        game = {
+        return {
             ...game,
             message: "You Lose!",
             messageStyle: {color: "red"}
         }
     }
-    res.send(game)
-})
+}
 
 function gameIsOver(gameToCheck: Game) {
-    return gameToCheck.dealerScore > 0 || gameToCheck.playerScore >= 21;
+    return gameToCheck.playerScore >= 21;
 }
 
 function youWon(gameToAnalyze: Game) {
