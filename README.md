@@ -22,3 +22,8 @@ git clone https://github.com/svettwer/nothing-but-js.git
 cd nothing-but-js
 npm start:dev
 ```
+
+## Tagged development stages
+ * boilerplate: Base packages (frontend, backend, api) to start development from
+ * game-finished: Game POC ready to play
+ * refactored-business-logic: moved parts of the business logic to the backend + some polish 
