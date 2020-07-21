@@ -53,7 +53,7 @@ function App() {
       );
     }else{
       let message;
-      if(game.playerScore > 21){
+      if(game.playerScore > 21 || game.playerScore < game.dealerScore){
         message = "YOU LOSE!";
       }else if(game.dealerScore > 21 || game.playerScore > game.dealerScore){
         message = "YOU WIN!";
