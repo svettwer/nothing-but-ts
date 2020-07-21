@@ -53,26 +53,36 @@ function App() {
       );
     }else{
       let message;
-      if(game.playerScore > 21 || game.playerScore < game.dealerScore){
+      let messageStyle;
+      if(game.playerScore > 21 || (game.playerScore < game.dealerScore && game.dealerScore < 21)){
         message = "YOU LOSE!";
+        messageStyle = {color: "red"}
       }else if(game.dealerScore > 21 || game.playerScore > game.dealerScore){
         message = "YOU WIN!";
+        messageStyle = {color: "green"}
       }
       return (
           <div>
-            <h1>{message}</h1>
+            <h1 style={messageStyle}>{message}</h1>
             <button onClick={handleNewGame}>New game!</button>
           </div>);
     }
   }
 
+  function getMarkup(score: number) {
+    if(score > 21){
+      return {color: "red"};
+    }
+    return {};
+  }
+
   return (
       <div className="App">
         <div id="score">
-          <h1>
+          <h1 style={getMarkup(game.dealerScore)}>
             Dealer: {game.dealerScore > 0 ? game.dealerScore : "?"}
           </h1>
-          <h1>
+          <h1 style={getMarkup(game.playerScore)}>
             Player: {game.playerScore}
           </h1>
         </div>
