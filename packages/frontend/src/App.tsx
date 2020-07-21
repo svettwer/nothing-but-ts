@@ -37,13 +37,7 @@ function App() {
 
   function renderPlayerInterface() {
     function gameIsOver(gameToCheck: Game) {
-      return gameToCheck.dealerScore > 0 || gameToCheck.playerScore >= 21;
-    }
-
-    function youWon(gameToAnalyze: Game) {
-      return gameToAnalyze.dealerScore > 21
-          || gameToAnalyze.playerScore > gameToAnalyze.dealerScore
-          && gameToAnalyze.playerScore <= 21;
+      return gameToCheck?.message;
     }
 
     if(!gameIsOver(game)){
@@ -58,18 +52,9 @@ function App() {
           </div>
       );
     }else{
-      let message;
-      let messageStyle;
-      if(youWon(game)){
-        message = "YOU WIN!";
-        messageStyle = {color: "green"}
-      }else {
-        message = "YOU LOSE!";
-        messageStyle = {color: "red"}
-      }
       return (
           <div>
-            <h1 style={messageStyle}>{message}</h1>
+            <h1 style={game.messageStyle}>{game.message}</h1>
             <button onClick={handleNewGame}>New game!</button>
           </div>);
     }
