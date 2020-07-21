@@ -1,11 +1,21 @@
 {
-  "name": "api",
+  "name": "@nothing-but-js/api",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Sven Hettwer <sven.hettwer@consol.de>",
   "license": "ISC",
   "main": "lib/api.js",
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "npm-watch"
+  },
+  "watch": {
+    "build": "src/*.js"
+  },
   "devDependencies": {
     "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "npm-watch": "^0.6.0"
   }
 }
