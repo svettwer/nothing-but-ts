@@ -1,9 +1,9 @@
-# nothing-but-js
-Associated repository to my talk "Nothing but JS"
+# nothing-but-ts
+Associated repository to my talk "Nothing but TS"
 
 ## Abstract
 
-Backend: Java; Frontend: Something with Javascript. This is what the tech stack looks like for most companies from medium-sized companies to large corporations when it comes to front-end back-end applications. This poses some problems. Code management as Monorepo? Uniform configuration? No technological hurdles? Anyone can perform any task? DevOps? Cloud first? Not easy at all! In this talk, I'll show some live coding and how to use technologies from the Javascript ecosystem in a combined front-end and back-end project to create a 12-factor app from a single repository. Further we'll experience an elegance and simplicity in code that is rarely found in the Java ecosystem.
+Backend: Java; Frontend: Something with Javascript. This is what the tech stack looks like for most companies from medium-sized companies to large corporations when it comes to front-end back-end applications. This poses some problems. Code management as Monorepo? Uniform configuration? No technological hurdles? Anyone can perform any task? DevOps? Cloud first? Not easy at all! In this talk, I'll show some live coding and how to use technologies from the Javascript/Typescript ecosystem in a combined front-end and back-end project to create a 12-factor like app from a single repository. Further we'll experience an elegance and simplicity in code that is rarely found in the Java ecosystem.
 
 ## Boilerplate projects
 * [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate)
@@ -26,5 +26,5 @@ npm start:dev
 
 ## Tagged development stages
  * boilerplate: Base packages (frontend, backend, api) to start development from
- * game-finished: Game POC ready to play
+ * game-finished: Game POC, ready to play
  * refactored-business-logic: moved parts of the business logic to the backend + some polish 
