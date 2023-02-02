@@ -18,7 +18,7 @@
   "license": "ISC",
   "homepage": "https://github.com/svettwer/nothing-but-js#readme",
   "dependencies": {
-    "lerna": "^3.22.0",
+    "lerna": "^6.4.1",
     "lerna-audit": "^1.2.0"
   }
 }
